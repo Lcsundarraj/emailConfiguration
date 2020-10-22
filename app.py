@@ -28,11 +28,13 @@ def setEmailInfo():
 	email_info={}
 	sender=request.form['sender']
 	receiver=request.form['receiver']
+	bcc=request.form['bcc']
 	sub=request.form['sub']
 	Message=request.form['Message']
 	#send data ta List
 	email_info['sender']=sender
 	email_info['receiver']=receiver
+	email_info['bcc']=bcc
 	email_info['sub']=sub
 	email_info['Message']=Message
 

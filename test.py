@@ -12,15 +12,16 @@ def send_mail(email_info):
     body = email_info['Message']
     sender_email = email_info['sender']
     receiver_email = email_info['receiver']
-    password = input("Type your password and press enter:")
+    bcc_email = email_info['bcc']
+    password = ("Type your password and press enter:")
 
     # Create a multipart message and set headers
     message = MIMEMultipart()
     message["From"] = sender_email
     message["To"] = receiver_email
     message["Subject"] = subject
-    message["Bcc"] = receiver_email  # Recommended for mass emails
-
+    # message["Bcc"] = bcc_email  # Recommended for mass emails
+    # message["body"]='Subject: {}\n\n{}'.format(subject, body)
     # Add body to email
     message.attach(MIMEText(body, "plain"))
 
