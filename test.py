@@ -13,7 +13,7 @@ def send_mail(email_info):
     sender_email = email_info['sender']
     receiver_email = email_info['receiver']
     bcc_email = email_info['bcc']
-    password = ("Type your password and press enter:")
+    password = input("Type your password and press enter:")
 
     # Create a multipart message and set headers
     message = MIMEMultipart()
