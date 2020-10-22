@@ -42,12 +42,14 @@ def setEmailInfo():
 def send_to_mail():
 	email_info=setEmailInfo()
 	test.send_mail(email_info)
-	return redirect(url_for('configure_email'))
+	configure_email(email_info)
+	return redirect(url_for('index'))
+	# return redirect(url_for('configure_email'))
 
 
 
-@app.route('/email',  methods=['POST'])
-def configure_email():
+
+def configure_email(email_info):
 	email_info=setEmailInfo()
 	# print the list
 	print("Sending Data to DB")
