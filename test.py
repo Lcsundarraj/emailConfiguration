@@ -128,7 +128,7 @@ def send_mail(email_info):
     message["To"] = receiver_email
     # Create the plain-text and HTML version of your message
     text = email_info['Message']
-    html = home.html
+    # html = home.html
     
 
     # Turn these into plain/html MIMEText objects
